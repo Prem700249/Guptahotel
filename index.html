@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gupta Hotel | Packed Food for Every Occasion</title>
+<meta name="description" content="Gupta Hotel, near Digboi, Assam. Packed food for birthdays, events and family functions. Order on WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#1a1a1a;--card:#242424;--line:#383838;--gold:#f5c518;--text:#fff;--mute:#c9c9c9;--leaf:#4f8a4b;--veg:#2fb344;--non:#e5383b}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Poppins,system-ui,sans-serif;line-height:1.5;padding-bottom:90px}
+h1,h2,h3{font-family:"Playfair Display",Georgia,serif;margin:0}
+button,input,textarea,select{font:inherit}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.wrap{max-width:1000px;margin:0 auto;padding:0 16px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 24px;border-radius:999px;border:2px solid var(--gold);background:none;color:var(--gold);font-weight:600;text-decoration:none;cursor:pointer;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-2px)}.btn:active{transform:scale(.97)}
+.btn.gold{background:var(--gold);color:#111}
+/* hero */
+.hero{position:relative;overflow:hidden;text-align:center;padding:56px 16px 64px;background:radial-gradient(ellipse at 50% 0,#2b2a22,var(--bg) 70%)}
+.leaf{position:absolute;width:200px;opacity:.13;color:var(--leaf);pointer-events:none}
+.leaf.l{left:-50px;bottom:-30px}.leaf.r{right:-50px;top:-20px;transform:scaleX(-1) rotate(20deg)}
+.crest{width:84px;height:84px;margin:0 auto 12px;display:block}
+.hero h1{font-size:clamp(2.6rem,10vw,4.6rem);font-weight:800;color:var(--gold);letter-spacing:.5px}
+.tag{font-family:"Playfair Display",serif;font-size:clamp(1.1rem,4vw,1.5rem);margin:6px 0}
+.sub{color:var(--mute);margin:4px 0 24px}
+.hero .btns{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.hero>*:not(.leaf){position:relative;animation:rise .7s both}
+.hero>*:nth-child(4){animation-delay:.1s}.hero>*:nth-child(5){animation-delay:.2s}.hero>*:nth-child(6){animation-delay:.3s}.hero>*:nth-child(7){animation-delay:.4s}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+/* occasions */
+.occ{padding:28px 0 8px;text-align:center}
+.occ h2,.why h2,.menu-head h2{font-size:1.5rem;color:var(--gold)}
+.occ ul{display:flex;gap:10px;overflow-x:auto;list-style:none;padding:14px 16px;margin:0 -16px;justify-content:safe center}
+.occ li{flex:0 0 auto;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 16px;min-width:108px}
+.occ li span{display:block;font-size:1.6rem}
+.occ li{font-size:.85rem;font-weight:500}
+.occ p{color:var(--mute);margin:4px 0}
+/* nav */
+.catnav{position:sticky;top:0;z-index:20;background:rgba(26,26,26,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.catnav ul{display:flex;gap:8px;overflow-x:auto;list-style:none;margin:0;padding:10px 16px;scrollbar-width:none;max-width:1000px;margin:auto}
+.catnav a{display:block;white-space:nowrap;padding:8px 16px;border-radius:999px;border:1px solid var(--line);text-decoration:none;font-size:.9rem;color:var(--mute)}
+.catnav a.on{background:var(--gold);border-color:var(--gold);color:#111;font-weight:600}
+/* menu */
+.menu-head{padding:28px 0 8px}
+.offline{margin:14px 0 0;padding:12px 16px;border-left:4px solid var(--gold);background:var(--card);border-radius:0 12px 12px 0;color:var(--mute);font-size:.9rem}
+.search{width:100%;margin-top:12px;min-height:48px;padding:0 18px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--text)}
+.sec{padding-top:24px}
+.sec h3{font-size:1.5rem;margin-bottom:2px}
+.note{color:var(--mute);font-size:.85rem;margin:0 0 12px}
+.grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}
+.item{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px;transition:transform .2s,border-color .2s}
+.item:hover{transform:translateY(-3px);border-color:var(--gold)}
+.top{display:flex;align-items:center;gap:10px}
+.dot{flex:0 0 16px;height:16px;border:2px solid var(--veg);border-radius:3px;display:grid;place-items:center}
+.dot::after{content:"";width:8px;height:8px;border-radius:50%;background:var(--veg)}
+.dot.non{border-color:var(--non)}.dot.non::after{background:var(--non)}
+.name{font-weight:600}
+.pick{display:inline-block;margin-top:6px;font-size:.72rem;background:rgba(245,197,24,.15);color:var(--gold);padding:2px 10px;border-radius:999px}
+.opts{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.opt{display:flex;align-items:center;gap:10px;min-height:46px;padding:0 6px 0 14px;border-radius:999px;border:1px solid var(--gold);background:none;color:var(--text);cursor:pointer;transition:transform .15s,background .15s}
+.opt b{background:var(--gold);color:#111;border-radius:999px;padding:6px 14px;font-size:.85rem}
+.opt:hover{background:rgba(245,197,24,.12)}.opt:active{transform:scale(.95)}
+.empty{color:var(--mute);text-align:center;padding:30px 0}
+/* why + footer */
+.why{padding:40px 0 8px;text-align:center}
+.why ul{list-style:none;padding:0;margin:16px 0 0;display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.why li{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px}
+footer{margin-top:40px;padding:36px 16px;text-align:center;border-top:1px solid var(--line);background:#141414}
+footer h2{color:var(--gold)}
+footer p{color:var(--mute);margin:6px 0}
+footer .btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:14px}
+/* cart */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:30;padding:10px 16px calc(10px + env(safe-area-inset-bottom));display:none}
+.bar.show{display:block}
+.bar button{display:flex;width:100%;max-width:600px;margin:auto;align-items:center;justify-content:space-between;min-height:56px;padding:0 20px;border:0;border-radius:16px;background:var(--gold);color:#111;font-weight:600;cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.5)}
+.bounce{animation:bounce .45s}
+@keyframes bounce{40%{transform:scale(1.15)}70%{transform:scale(.96)}}
+.ov{position:fixed;inset:0;z-index:40;background:rgba(0,0,0,.65);display:none;align-items:flex-end;justify-content:center}
+.ov.show{display:flex}
+.panel{background:#202020;width:100%;max-width:560px;max-height:92vh;overflow:auto;border-radius:20px 20px 0 0;padding:18px 16px 24px;animation:rise .3s}
+@media(min-width:600px){.ov{align-items:center}.panel{border-radius:20px}}
+.ph{display:flex;justify-content:space-between;align-items:center}
+.ph h2{color:var(--gold);font-size:1.4rem}
+.x{min-width:44px;min-height:44px;border:0;background:none;color:var(--text);font-size:1.6rem;cursor:pointer}
+.line{display:grid;grid-template-columns:1fr auto;gap:6px 10px;padding:12px 0;border-bottom:1px solid var(--line)}
+.line small{color:var(--mute)}
+.qty{display:flex;align-items:center;gap:6px}
+.qty button{width:36px;height:36px;border-radius:50%;border:1px solid var(--gold);background:none;color:var(--gold);font-size:1.1rem;cursor:pointer}
+.rm{background:none;border:0;color:#ff8a8a;cursor:pointer;text-decoration:underline;min-height:36px}
+.sum div{display:flex;justify-content:space-between;padding:3px 0;color:var(--mute)}
+.sum .g{color:var(--text);font-weight:600;font-size:1.15rem;border-top:1px solid var(--line);margin-top:6px;padding-top:8px}
+.pk{font-size:.8rem;color:var(--gold)}
+label{display:block;margin-top:12px;font-size:.85rem;color:var(--mute)}
+.f{width:100%;min-height:46px;padding:10px 14px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--text)}
+.send{width:100%;margin-top:18px;background:#25d366;border-color:#25d366;color:#0a2915;min-height:54px;font-size:1rem}
+.toast{position:fixed;left:50%;bottom:90px;transform:translate(-50%,20px);background:#fff;color:#111;padding:10px 18px;border-radius:999px;font-size:.9rem;font-weight:500;opacity:0;pointer-events:none;transition:.25s;z-index:60;max-width:90vw}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <svg class="leaf l" viewBox="0 0 200 200" fill="currentColor" aria-hidden="true"><path d="M10 190C10 90 80 20 190 10 190 110 120 180 10 190ZM10 190C60 130 100 90 150 50" stroke="#1a1a1a" stroke-width="3" fill="currentColor"/></svg>
+  <svg class="leaf r" viewBox="0 0 200 200" fill="currentColor" aria-hidden="true"><path d="M10 190C10 90 80 20 190 10 190 110 120 180 10 190ZM10 190C60 130 100 90 150 50" stroke="#1a1a1a" stroke-width="3" fill="currentColor"/></svg>
+  <svg class="crest" viewBox="0 0 100 100" role="img" aria-label="Gupta Hotel G crest"><circle cx="50" cy="50" r="46" fill="#000" stroke="#f5c518" stroke-width="3"/><circle cx="50" cy="50" r="39" fill="none" stroke="#fff" stroke-width="1" opacity=".6"/><text x="50" y="66" text-anchor="middle" font-family="Playfair Display,Georgia,serif" font-size="52" font-weight="800" fill="#fff">G</text></svg>
+  <h1>Gupta Hotel</h1>
+  <p class="tag">Packed Food for Every Occasion</p>
+  <p class="sub">Good Food, Great Moments. Fresh, hot, and packed with love.</p>
+  <div class="btns">
+    <a class="btn gold" href="https://wa.me/919395850370?text=Hello%20Gupta%20Hotel" target="_blank" rel="noopener">Order on WhatsApp</a>
+    <a class="btn" href="#menu">View Menu</a>
+  </div>
+</header>
+
+<section class="occ wrap" aria-labelledby="occh">
+  <h2 id="occh">Food for every occasion</h2>
+  <ul>
+    <li><span aria-hidden="true">🎂</span>Birthdays</li>
+    <li><span aria-hidden="true">🎉</span>Events</li>
+    <li><span aria-hidden="true">🍽️</span>Gatherings</li>
+    <li><span aria-hidden="true">🏠</span>Family Functions</li>
+    <li><span aria-hidden="true">✨</span>Special Functions</li>
+  </ul>
+  <p>Planning a party? Call or WhatsApp <a href="tel:+919395850370"><strong>9395850370</strong></a> for bulk and party orders.</p>
+</section>
+
+<nav class="catnav" aria-label="Menu categories"><ul id="nav"></ul></nav>
+
+<main class="wrap" id="menu">
+  <div class="menu-head">
+    <h2>Our Menu</h2>
+    <label for="q" class="sr" style="position:absolute;left:-9999px">Search the menu</label>
+    <input id="q" class="search" type="search" placeholder="Search dishes, e.g. biryani" autocomplete="off">
+  </div>
+  <p class="offline" role="note">This is an offline order menu. Send your order request on WhatsApp, and we will confirm your order and details with you directly.</p>
+  <div id="secs"></div>
+  <p class="empty" id="none" hidden>No dishes match your search.</p>
+</main>
+
+<section class="why wrap" aria-labelledby="whyh">
+  <h2 id="whyh">Why Gupta Hotel</h2>
+  <ul>
+    <li><strong>Packed for occasions</strong><br>Food packed and ready for birthdays, events and family functions.</li>
+    <li><strong>Thali to biryani</strong><br>A wide menu: thali, momo, gravy, rice, noodles, rolls, snacks, paratha and biryani.</li>
+    <li><strong>Easy ordering</strong><br>Pick your dishes and send the order straight on WhatsApp.</li>
+  </ul>
+</section>
+
+<footer>
+  <h2>Gupta Hotel</h2>
+  <p>Near Digboi, Assam</p>
+  <p>Call: <a href="tel:+919395850370">9395850370</a></p>
+  <p class="offline" style="max-width:520px;margin:12px auto;text-align:left" role="note">This is an offline order menu. Send your order request on WhatsApp, and we will confirm your order and details with you directly.</p>
+  <div class="btns"><a class="btn gold" href="https://wa.me/919395850370" target="_blank" rel="noopener">WhatsApp us</a></div>
+  <!-- OWNER: add full address here when ready -->
+  <!-- OWNER: add opening hours here when ready -->
+  <!-- OWNER: add Instagram / Facebook links here when ready -->
+</footer>
+
+<div class="bar" id="bar"><button id="barBtn" aria-haspopup="dialog"><span><span id="ico" aria-hidden="true">🧾</span> <span id="bc">0 items</span></span><span>View order · <span id="bt">₹0</span></span></button></div>
+
+<div class="ov" id="ov" role="dialog" aria-modal="true" aria-labelledby="cth">
+  <div class="panel">
+    <div class="ph"><h2 id="cth">Your order list</h2><button class="x" id="close" aria-label="Close order">×</button></div>
+    <div id="lines"></div>
+    <div class="sum" id="sum"></div>
+    <div id="form">
+      <label for="nm">Your name (optional)</label><input class="f" id="nm" autocomplete="name">
+      <button class="btn send" id="send">Send Order on WhatsApp</button>
+    </div>
+  </div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+/* ============ MENU DATA: edit prices or add items here only ============
+   cat: category | name | veg: true/false | opts: [label, price] (label "" = single price)
+   tag: optional highlight label (visual only) */
+const WA = "919395850370";
+const H = (a,b)=>[["Half",a],["Full",b]];
+const S = a=>[["",a]];
+const CATS = [
+ {id:"Thali",note:"Price per thali"},
+ {id:"Momo",note:"Price per unit"},
+ {id:"Gravy",note:"Half / Full where shown"},
+ {id:"Fried Rice",note:"Half / Full where shown"},
+ {id:"Noodles",note:"Half / Full"},
+ {id:"Rolls",note:"Price per roll"},
+ {id:"Snacks",note:"Price per unit"},
+ {id:"Paratha",note:"Price per unit"},
+ {id:"Biryani",note:"Half / Full where shown"}
+];
+const MENU = [
+ {cat:"Thali",name:"Veg Rice Thali",veg:true,opts:S(70),tag:"Popular with families"},
+ {cat:"Thali",name:"Egg Thali",veg:false,opts:S(100)},
+ {cat:"Thali",name:"Chicken Thali",veg:false,opts:S(120)},
+ {cat:"Thali",name:"Fish Thali",veg:false,opts:S(120)},
+ {cat:"Momo",name:"Paneer Momo",veg:true,opts:S(60)},
+ {cat:"Momo",name:"Chicken Momo",veg:false,opts:S(60)},
+ {cat:"Momo",name:"Fried Momo",veg:true,opts:S(80)},
+ {cat:"Momo",name:"GH Special Chicken Soup",veg:false,opts:S(20),tag:"Chef's pick"},
+ {cat:"Gravy",name:"Paneer Butter Masala",veg:true,opts:H(120,200),tag:"Popular with families"},
+ {cat:"Gravy",name:"Matar Paneer",veg:true,opts:H(100,180)},
+ {cat:"Gravy",name:"Kadhai Paneer",veg:true,opts:H(130,200)},
+ {cat:"Gravy",name:"Kadhai Chicken",veg:false,opts:H(130,220)},
+ {cat:"Gravy",name:"Chicken Gravy",veg:false,opts:H(120,200)},
+ {cat:"Gravy",name:"Chilly Chicken",veg:false,opts:H(130,220)},
+ {cat:"Gravy",name:"Mustard Curry Fish",veg:false,opts:H(70,120)},
+ {cat:"Gravy",name:"Normal Fish Curry",veg:false,opts:H(40,70)},
+ {cat:"Gravy",name:"Egg Gravy",veg:false,opts:S(50)},
+ {cat:"Gravy",name:"Egg Masala Gravy",veg:false,opts:S(70)},
+ {cat:"Gravy",name:"Omelette Masala Gravy",veg:false,opts:S(60)},
+ {cat:"Gravy",name:"Mutton Gravy",veg:false,opts:H(90,150)},
+ {cat:"Gravy",name:"Mutton Kosha",veg:false,opts:H(150,300)},
+ {cat:"Fried Rice",name:"Veg Fried Rice",veg:true,opts:S(60)},
+ {cat:"Fried Rice",name:"Chicken Fried Rice",veg:false,opts:H(60,120)},
+ {cat:"Fried Rice",name:"Egg Fried Rice",veg:false,opts:H(50,100)},
+ {cat:"Fried Rice",name:"GH Special Fried Rice",veg:false,opts:H(90,160),tag:"Chef's pick"},
+ {cat:"Noodles",name:"Veg Noodles",veg:true,opts:H(30,60)},
+ {cat:"Noodles",name:"Chicken Noodles",veg:false,opts:H(60,120)},
+ {cat:"Noodles",name:"Egg Noodles",veg:false,opts:H(50,100)},
+ {cat:"Noodles",name:"Paneer Noodles",veg:true,opts:H(70,130)},
+ {cat:"Noodles",name:"GH Special Noodles",veg:false,opts:H(80,150)},
+ {cat:"Rolls",name:"Veg Roll",veg:true,opts:S(30)},
+ {cat:"Rolls",name:"Chicken Roll",veg:false,opts:S(50)},
+ {cat:"Rolls",name:"Egg Roll",veg:false,opts:S(40)},
+ {cat:"Rolls",name:"Double Egg Roll",veg:false,opts:S(50)},
+ {cat:"Rolls",name:"Paneer Roll",veg:true,opts:S(60)},
+ {cat:"Rolls",name:"GH Special Roll",veg:false,opts:S(70)},
+ {cat:"Snacks",name:"Veg Chop",veg:true,opts:S(10)},
+ {cat:"Snacks",name:"Chicken Chop",veg:false,opts:S(20)},
+ {cat:"Snacks",name:"Fish Cutlet",veg:false,opts:S(20)},
+ {cat:"Snacks",name:"Egg Chop",veg:false,opts:S(20)},
+ {cat:"Snacks",name:"Chicken Pakora",veg:false,opts:S(10)},
+ {cat:"Paratha",name:"Plain Paratha",veg:true,opts:S(20)},
+ {cat:"Paratha",name:"Aloo Paratha",veg:true,opts:S(30)},
+ {cat:"Paratha",name:"Mughlai Paratha",veg:false,opts:S(70)},
+ {cat:"Paratha",name:"Laccha Paratha",veg:true,opts:S(30)},
+ {cat:"Biryani",name:"Chicken Biryani",veg:false,opts:H(100,180),tag:"Chef's pick"},
+ {cat:"Biryani",name:"Egg Biryani",veg:false,opts:H(80,150)},
+ {cat:"Biryani",name:"Matka Biryani",veg:false,opts:S(300),tag:"Great for sharing"}
+];
+/* ============ END MENU DATA ============ */
+
+const $ = id => document.getElementById(id);
+const cart = new Map(); // key -> {name,label,price,qty}
+const slug = s => s.toLowerCase().replace(/[^a-z0-9]+/g,"-");
+
+function renderMenu(filter){
+  const f = (filter||"").trim().toLowerCase();
+  let html = "", shown = 0;
+  CATS.forEach(c=>{
+    const items = MENU.map((m,i)=>({m,i})).filter(x=>x.m.cat===c.id && x.m.name.toLowerCase().includes(f));
+    if(!items.length) return;
+    shown += items.length;
+    html += `<section class="sec" id="s-${slug(c.id)}" data-cat="${slug(c.id)}"><h3>${c.id}</h3><p class="note">${c.note}</p><div class="grid">`;
+    items.forEach(({m,i})=>{
+      html += `<article class="item"><div class="top"><span class="dot ${m.veg?"":"non"}" role="img" aria-label="${m.veg?"Vegetarian":"Non-vegetarian"}"></span><span class="name">${m.name}</span></div>`;
+      if(m.tag) html += `<span class="pick">${m.tag}</span>`;
+      html += `<div class="opts">`;
+      m.opts.forEach((o,j)=>{
+        const lbl = o[0] ? `${o[0]} ₹${o[1]}` : `₹${o[1]}`;
+        html += `<button class="opt" data-i="${i}" data-j="${j}" aria-label="Add ${m.name} ${lbl} to order">${lbl}<b>Add</b></button>`;
+      });
+      html += `</div></article>`;
+    });
+    html += `</div></section>`;
+  });
+  $("secs").innerHTML = html;
+  $("none").hidden = shown>0;
+  observe();
+}
+
+function buildNav(){
+  $("nav").innerHTML = CATS.map(c=>`<li><a href="#s-${slug(c.id)}" data-nav="${slug(c.id)}">${c.id}</a></li>`).join("");
+}
+let io;
+function observe(){
+  if(io) io.disconnect();
+  if(!("IntersectionObserver" in window)) return;
+  io = new IntersectionObserver(es=>{
+    es.forEach(e=>{
+      if(e.isIntersecting){
+        document.querySelectorAll(".catnav a").forEach(a=>a.classList.toggle("on",a.dataset.nav===e.target.dataset.cat));
+        const on = document.querySelector(".catnav a.on");
+        if(on) on.scrollIntoView({inline:"center",block:"nearest"});
+      }
+    });
+  },{rootMargin:"-20% 0px -70% 0px"});
+  document.querySelectorAll(".sec").forEach(s=>io.observe(s));
+}
+
+function totals(){
+  let units=0, sub=0;
+  cart.forEach(l=>{units+=l.qty; sub+=l.qty*l.price;});
+  return {units,sub,total:sub};
+}
+function toast(msg){
+  const t=$("toast"); t.textContent=msg; t.classList.add("show");
+  clearTimeout(toast.t); toast.t=setTimeout(()=>t.classList.remove("show"),1600);
+}
+function add(i,j){
+  const m=MENU[i], o=m.opts[j], key=m.name+"|"+o[0];
+  const l=cart.get(key)||{name:m.name,label:o[0],price:o[1],qty:0};
+  l.qty++; cart.set(key,l);
+  update(); toast(`${m.name}${o[0]?" ("+o[0]+")":""} added`);
+  const ic=$("ico"); ic.classList.remove("bounce"); void ic.offsetWidth; ic.classList.add("bounce");
+}
+function update(){
+  const t=totals();
+  $("bar").classList.toggle("show",t.units>0);
+  $("bc").textContent=`${t.units} item${t.units===1?"":"s"}`;
+  $("bt").textContent="₹"+t.total;
+  renderCart();
+}
+function renderCart(){
+  const t=totals();
+  if(!t.units){
+    $("lines").innerHTML=`<p class="empty">Your order list is empty. Add some dishes from the menu.</p>`;
+    $("sum").innerHTML=""; $("form").hidden=true; return;
+  }
+  $("form").hidden=false;
+  let h="";
+  cart.forEach((l,k)=>{
+    h+=`<div class="line"><div><strong>${l.name}</strong>${l.label?` (${l.label})`:""}<br><small>₹${l.price} each</small></div><div><strong>₹${l.qty*l.price}</strong></div>
+    <div class="qty"><button data-q="-1" data-k="${k}" aria-label="Decrease ${l.name}">−</button><span aria-live="polite">${l.qty}</span><button data-q="1" data-k="${k}" aria-label="Increase ${l.name}">+</button></div>
+    <div style="text-align:right"><button class="rm" data-rm="${k}">Remove</button></div></div>`;
+  });
+  $("lines").innerHTML=h;
+  $("sum").innerHTML=`<div><span>Subtotal</span><span>₹${t.sub}</span></div>
+   <div class="g"><span>Total</span><span>₹${t.total}</span></div>`;
+}
+function openCart(){renderCart();$("ov").classList.add("show");$("close").focus();}
+function closeCart(){$("ov").classList.remove("show");$("barBtn").focus();}
+
+function send(){
+  const t=totals(); if(!t.units) return;
+  const L=["New order request from Gupta Hotel website (offline order)"];
+  const name=$("nm").value.trim();
+  if(name) L.push("Name: "+name);
+  L.push("Items:");
+  cart.forEach(l=>L.push(`- ${l.qty} x ${l.name}${l.label?" ("+l.label+")":""} @ ₹${l.price} = ₹${l.qty*l.price}`));
+  L.push("Total: ₹"+t.total);
+  window.open(`https://wa.me/${WA}?text=${encodeURIComponent(L.join("\n"))}`,"_blank","noopener");
+}
+
+document.addEventListener("click",e=>{
+  const o=e.target.closest(".opt"); if(o) return add(+o.dataset.i,+o.dataset.j);
+  const q=e.target.closest("[data-q]");
+  if(q){const l=cart.get(q.dataset.k); l.qty+=+q.dataset.q; if(l.qty<1) cart.delete(q.dataset.k); return update();}
+  const r=e.target.closest("[data-rm]"); if(r){cart.delete(r.dataset.rm); return update();}
+  if(e.target===$("ov")) closeCart();
+});
+$("barBtn").onclick=openCart;
+$("close").onclick=closeCart;
+$("send").onclick=send;
+$("q").addEventListener("input",e=>renderMenu(e.target.value));
+document.addEventListener("keydown",e=>{if(e.key==="Escape"&&$("ov").classList.contains("show")) closeCart();});
+
+buildNav(); renderMenu(); update();
+</script>
+</body>
+</html>
